@@ -1,0 +1,32 @@
+.MAINPAGE{
+    border: 2px solid black;
+}
+
+.HEADER{
+    border: 2px solid black;
+    height: 150px;
+}
+
+.leftPanel{
+    border: 2px solid black;
+    float: left;
+    width: 20%;
+}
+
+.Middle{
+    border: 2px solid black;
+    float: left;
+    width: 60%;
+}
+
+.adspace{
+    border: 2px solid black;
+}
+
+.reviewPanel{
+    border: 2px solid black;
+}
+
+.rightPanel{
+    border: 2px solid black;
+}
