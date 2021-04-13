@@ -1,0 +1,30 @@
+.Body{
+    border: 2px solid black;
+    height: 670px;
+    margin: 5px;
+    display: flex;
+}
+
+.bodyLeftPanel{
+    border: 2px solid black;
+    height: 655px;
+    margin: 5px;
+    flex-grow: 1;
+    /*float: left;*/
+}
+
+.bodyMiddlePanel{
+    border: 2px solid black;
+    height: 655px;
+    margin: 5px;
+    flex-grow: 3;
+    /*float: left;*/
+}
+
+.bodyRightPanel{
+    border: 2px solid black;
+    height: 655px;
+    margin: 5px;
+    /* this item shall fill remaining space */
+    flex-grow: 1;
+}

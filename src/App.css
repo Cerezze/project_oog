@@ -1,33 +1,11 @@
-.MAINPAGE{
-    /*border: 2px solid black;*/
-}
-
-.HEADER{
+html{
+    height: 900px;
     border: 2px solid black;
-    height: 150px;
+    margin: 5px;
 }
 
-.leftPanel{
-    /*border: 2px solid black;*/
-    float: left;
-    width: 20%;
-}
-
-.Middle{
+body{
+    height: 885px;
     border: 2px solid black;
-    float: left;
-    width: 60%;
-}
-
-.adspace{
-   /* border: 2px solid black;*/
-}
-
-.reviewPanel{
-    border: 2px solid black;
-    
-}
-
-.rightPanel{
-    /*border: 2px solid black;*/
+    margin: 5px;
 }

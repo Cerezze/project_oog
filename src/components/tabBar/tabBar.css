@@ -1,0 +1,12 @@
+.tabBar{
+    border: 2px solid black;
+    margin: 5px;
+    height: 75px;
+}
+@media screen and (max-width: 1000px){
+    .tabBar{
+        border: 2px solid black;
+        margin: 5px;
+        height: 60px;
+    }
+}
