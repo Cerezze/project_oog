@@ -10,15 +10,48 @@
     border: 2px solid black;
     height: 260px;
     margin: 5px;
-    flex-shrink: 1;
     flex-grow: 1;
     /*float: left;*/
 }
 
-.reviewBodyRightPanel{
+.reviewBody{
     border: 2px solid black;
-    height: 260px;
+    height: 265px;
+}
+
+.leftReviewPanel{
+    border: 2px solid black;
     margin: 5px;
-    /* this item shall fill remaining space */
     flex-grow: 1;
+}
+
+.rightReviewPanel{
+    border: 2px solid black;
+    margin: 5px;
+    flex-grow: 1;
+}
+.reviewStatus{
+    border: 2px solid black;
+    margin: 5px;
+    height: 60px;
+}
+
+@media screen and (max-width: 415px){
+    .reviewBody{
+        border: 2px solid black;
+        height: 300px;
+    }
+
+    .reviewStatus{
+        height: 45px;
+    }
+
+    .leftReviewPanel{
+        display: none;
+    }
+    .leftReviewPanelmob{
+        border: 2px solid black;
+        margin: 5px;
+        height: 170px;
+    }
 }

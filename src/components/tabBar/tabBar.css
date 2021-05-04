@@ -10,3 +10,11 @@
         height: 60px;
     }
 }
+
+@media screen and (max-width:  415px){
+    .tabBar{
+        border: 2px solid black;
+        margin: 5px;
+        height: 37px;
+    }
+} 

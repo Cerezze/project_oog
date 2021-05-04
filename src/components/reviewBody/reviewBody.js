@@ -1,12 +1,20 @@
 import React from 'react';
 import './reviewBody.css';
+import TabBar from "../tabBar/tabBar";
 
 const reviewBody = (props) =>(
     <div className="reviewBody">
-        <div className="reviewBodyLeftPanel">
-                
+        <div className = "leftReviewPanel">
+
         </div>
-        <div className="reviewBodyRightPanel">
+        <div className = "rightReviewPanel">
+            <div className = "reviewStatus">
+
+            </div>
+            <div className = "leftReviewPanelmob">
+
+            </div>
+            <TabBar/>
         </div>
     </div>
 );

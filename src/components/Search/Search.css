@@ -1,18 +1,46 @@
 .search{
-    border: 2px solid black;
-    height: 62px;
+    /*border: 2px solid black;*/
+    height: 10px;
     margin: 5px;
+}
+
+.SearchLog{
+    /*border: 2px solid black;*/
+    float: left;
+}
+
+input{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    border-bottom: 2px solid black;
+    position: relative;
+    top: 12px;
+    left: -14px;
+}
+
+::placeholder{
+    opacity: 1;
+    color: black;
+    font-weight: bold;
+}
+
+input:focus{
+    outline: none;
 }
 
 @media screen and (max-width: 1000px){
 .search{
-        border: 2px solid black;
+        /*border: 2px solid black;*/
         height: 52px;
         margin: 5px;
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 415px){
     .search{
             border: 2px solid black;
             height: 32px;

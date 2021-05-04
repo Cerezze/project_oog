@@ -5,13 +5,21 @@ import ReviewBody from '../reviewBody/reviewBody';
 
 const Body = (props) =>(
     <div className="Body">
-        <div className="bodyLeftPanel">
+        <div className = "flexBody">
+            <div className="bodyLeftPanel">
+            </div>
+            <div className="bodyMiddlePanel">
+                <TabBar/>
+                <div className = "reviewCont">
+                    <ReviewBody/>
+                </div>
+            </div>
+            <div className="bodyRightPanel">
+            </div>
         </div>
-        <div className="bodyMiddlePanel">
-            <TabBar/>
-            <ReviewBody/>
-        </div>
-        <div className="bodyRightPanel">
+        
+        <div className = "bodyBottomPanel">
+
         </div>
     </div>
 );
