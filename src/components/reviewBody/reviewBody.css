@@ -1,5 +1,5 @@
 .reviewBody{
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     height: 275px;
     margin: 5px;
     /*all children will flex */
@@ -7,34 +7,60 @@
 }
 
 .reviewBodyLeftPanel{
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     height: 260px;
     margin: 5px;
     flex-grow: 1;
     /*float: left;*/
 }
 
-.reviewBody{
-    border: 2px solid black;
-    height: 265px;
-}
-
 .leftReviewPanel{
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     margin: 5px;
     flex-grow: 1;
+    background-color: red;
+    width: 60px;
 }
 
 .rightReviewPanel{
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     margin: 5px;
     flex-grow: 1;
 }
+
 .reviewStatus{
-    border: 2px solid black;
+    border-bottom: 2px solid black;
     margin: 5px;
     height: 60px;
+    display: flex;
 }
+
+.dateTime{
+    /*border: 2px solid black;*/
+    flex-grow: 1;
+    width: 0px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.Icon{
+    /*border: 2px solid black;*/
+    flex-grow: 1;
+    width: 0px;
+}
+
+.commentIcon{
+    float: right;
+    margin-top: 10px;
+}
+
+.numOfComments{
+    float: right;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-right: 3px;
+}
+
 
 @media screen and (max-width: 415px){
     .reviewBody{

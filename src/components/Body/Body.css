@@ -11,6 +11,45 @@
     margin: 5px;
     flex-grow: 1;
     /*float: left;*/
+    position:relative; 
+    overflow:hidden;
+}
+
+.sortPanel{
+    /*border: 2px solid black;*/
+    float:left;
+    margin-top: 80px;
+    background-repeat: no-repeat;
+    background-size: 150px 165px; background-image: url(../../Designs_and_Flow/basic_designs/closed_Sort_Tab.png);
+    width: 150px;
+    height: 165px;
+    position: absolute;
+    transform: translateX(-125px);
+    /*transition-property: background-size;*/
+    transition-duration: 0.3s;
+}
+
+.sortPanel:hover{
+    /*background-size: 150px 200px;*/
+    transform: translateX(0px);
+}
+
+.sortBy{
+    color: white;
+    margin-left: 25px;
+    margin-top: 10px;
+    font-weight: bold;
+    
+}
+
+.sortByList li{
+    border-bottom: 2px solid black;
+    list-style: none;
+    width: 100px;
+    margin-top: 23px;
+    margin-left: -25px;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .reviewCont{

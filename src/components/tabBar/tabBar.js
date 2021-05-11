@@ -6,7 +6,7 @@ import './tabBar.css';
 // tab bar will be THE component of text only stuff.
 const tabBar = (props) =>(
     <div className="tabBar">
-
+        <div className="title">{props.title}</div>
     </div>
 );
 
