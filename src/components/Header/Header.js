@@ -19,7 +19,10 @@ const Header = (props) =>(
         </div>
         <div className="headerRightPanel">
             <SignIn/>
-            <Search/>
+            <Search reviews = {props.reviews}
+                    term = {props.term}
+                    results = {props.results}
+                    Change = {props.Change}/>
         </div>
     </div>
 );

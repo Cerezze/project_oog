@@ -2,10 +2,12 @@
     /*border: 2px solid black;*/
     height: 10px;
     margin: 5px;
+    min-height: 150px;
+    overflow: hidden;
 }
 
 .SearchLog{
-    /*border: 2px solid black;*/
+  /*border: 2px solid black;*/
     float: left;
 }
 
@@ -20,6 +22,7 @@ input{
     position: relative;
     top: 12px;
     left: -14px;
+    /*border: 2px solid black;*/
 }
 
 ::placeholder{
@@ -30,6 +33,17 @@ input{
 
 input:focus{
     outline: none;
+}
+
+.searchList{
+    border: 2px solid black;
+    width: 208px;
+    margin-top: 25px;
+}
+
+.searchList li{
+    list-style: none;
+    border: 2px solid black;
 }
 
 @media screen and (max-width: 1000px){
