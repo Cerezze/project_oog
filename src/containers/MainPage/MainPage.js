@@ -10,7 +10,6 @@ import {useState, useEffect} from 'react';
         const [loadedReviews, setLoadedReviews] = useState([]);
         const [searchTerm, setSearchTerm] = useState("");
         const [searchResults, setSearchResults] = useState([]);
-        const [sorted, setSorted] = useState([]);
 
         let arr = loadedReviews.map(i =>{
             return i.Title;
@@ -38,7 +37,6 @@ import {useState, useEffect} from 'react';
     
                 setIsLoading(false);
                 setLoadedReviews(reviews.reverse());
-                setSorted(reviews.reverse())
             }); 
         }, []);
     
@@ -47,34 +45,22 @@ import {useState, useEffect} from 'react';
           };
     
          useEffect(() => {
-
             let results = arr.filter(review =>
                 review.toLowerCase().includes(searchTerm)
             );
 
             setSearchResults(results);
-            //console.log(arr2);
 
-            //results = arr2;
-            
-            //console.log(searchResults);
-            //console.log(loadedReviews);
           }, [searchTerm]);
 
           const handleClickSort = (id) => {
-            let arr1 = sorted;
-            
-            //setarr1(arr1);
-            //console.log("arr1", arr1);
-
-            console.log("arr1 init: ",arr1)
+            let arr1 = loadedReviews;
 
            if(id == 1){
                 console.log("Genre");
-                //console.log(loadedReviews);
                 for(let i = arr1.length - 1; i >= 0; i--){
                     for(let j = 0; j < arr1.length - 1; j++){
-                        if(arr1[j].Title < arr1[j + 1].Title){
+                        if(arr1[j].Title > arr1[j + 1].Title){
                             let temp = arr1[j];
                             arr1[j] = arr1[j + 1];
                             arr1[j + 1] = temp;
@@ -82,12 +68,21 @@ import {useState, useEffect} from 'react';
                     }
                 }
             }
-            else if(id == 2) 
+            else if(id == 2){ 
                 console.log("Time Posted");
+                for(let i = arr1.length - 1; i >= 0; i--){
+                    for(let j = 0; j < arr1.length - 1; j++){
+                        if(arr1[j].Date < arr1[j + 1].Date){
+                            let temp = arr1[j];
+                            arr1[j] = arr1[j + 1];
+                            arr1[j + 1] = temp;
+                        }
+                    }
+                }
+            }
+                
             else if(id == 3){
                 console.log("Pop");
-
-               //console.log(loadedReviews);
                 for(let i = arr1.length - 1; i >= 0; i--){
                     for(let j = 0; j < arr1.length - 1; j++){
                         if(arr1[j].commentNum < arr1[j + 1].commentNum){
@@ -99,17 +94,8 @@ import {useState, useEffect} from 'react';
                 }
             }
 
-            setSorted(arr1);
-            setLoadedReviews(arr1);
-            //setLoadedReviews(arr1);
-            //console.log("arr1", arr1);
-            //console.log("arr1", arr1);
-            
-    
-            //console.log("inclk: ", loadedReviews);
+            setLoadedReviews([...arr1]); 
         }
-
-          //console.log(loadedReviews[0]);
         return(
             <div className="MAINPAGE">
                 <Header term = {searchTerm}

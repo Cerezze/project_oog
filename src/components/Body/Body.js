@@ -57,17 +57,18 @@ const Body = (props) =>{
             <div className="bodyMiddlePanel">
                 <h1 className = "tabTitle">REVIEWS</h1>
                 <div className = "reviewCont">
-                    {arr1.length !== 0 ? arr1.map(i =>(
+                    {arr1.length === 0 ? props.reviews.map(i =>(
                             <ReviewBody title = {i.Title} 
-                            commentNum = {i.commentNum} 
-                            URLimage = {i.Image}
-                            dateAndTime = {i.Date}/>
-                    )) : props.reviews.map(i => {
-                                //console.log("after clk: ", props.reviews);
-                                return(<ReviewBody title = {i.Title} 
-                                            commentNum = {i.commentNum} 
-                                            URLimage = {i.Image}
-                                            dateAndTime = {i.Date}/>)})}
+                                        commentNum = {i.commentNum} 
+                                        URLimage = {i.Image}
+                                        dateAndTime = {i.Date}/>
+                    )) : props.reviews.filter(word => {
+                        return arr1.includes(word);
+                    }).map(i => {
+                        return(<ReviewBody title = {i.Title} 
+                                           commentNum = {i.commentNum} 
+                                           URLimage = {i.Image}
+                                           dateAndTime = {i.Date}/>)})}
                 </div>
             </div>
             <div className="bodyRightPanel">
